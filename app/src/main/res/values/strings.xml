@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Subnet Mask Master</string>
+    <string name="ip_address">IP Address:</string>
+    <string name="subnet_mask">Subnet mask:</string>
+    <string name="network_address">Network address:</string>
+    <string name="total_hosts">Total number of hosts:</string>
+    <string name="usable_hosts">Number of usable hosts:</string>
+    <string name="wildcard_mask">Wildcard mask:</string>
+    <string name="binary_subnet_mask">Binary subnet mask:</string>
+    <string name="ip_class">IP class:</string>
+    <string name="cidr_notation">CIDR notation:</string>
+    <string name="short_notation">Short:</string>
+    <string name="in_addr_arpa">in-addr.arpa:</string>
+    <string name="six_to_four">6to4 prefix:</string>
+    <string name="calculate_button_text">Calculate</string>
+</resources>

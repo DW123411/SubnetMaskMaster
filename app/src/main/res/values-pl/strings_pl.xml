@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ip_address">Adres IP:</string>
+    <string name="subnet_mask">Maska podsieci:</string>
+    <string name="network_address">Adres sieci:</string>
+    <string name="total_hosts">Liczba wszystkich hostów:</string>
+    <string name="usable_hosts">Liczba hostów do wykorzystania:</string>
+</resources>

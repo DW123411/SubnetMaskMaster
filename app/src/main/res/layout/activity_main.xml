@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="pl.dominikwozniak.submaskmaster.viewmodels.IPViewModel" />
+    </data>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="5sp"
+        android:layout_marginRight="5sp"
+        tools:context=".views.MainActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/ipAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/ip_address"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/ipAddressInput"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:text="@={viewModel.ipAddress}"
+                android:textSize="20sp"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/subnetMask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/subnet_mask"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/subnetMaskInput"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:text="@={viewModel.subnetMask}"
+                android:textSize="20sp"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/calculateButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:onClick="@{() -> viewModel.onCalculateClicked()}"
+                android:text="@string/calculate_button_text"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/networkAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="@string/network_address"
+                android:textSize="20sp"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/networkAddressValue"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text=""
+                android:textSize="20sp"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/totalHosts"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="@string/total_hosts"
+                android:textSize="20sp"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/totalHostsValue"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text=""
+                android:textSize="20sp"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/usableHosts"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="@string/usable_hosts"
+                android:textSize="20sp"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/usableHostsValue"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text=""
+                android:textSize="20sp"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/wildcardMask"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="@string/wildcard_mask"
+                android:textSize="20sp"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/wildcardMaskValue"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text=""
+                android:textSize="20sp"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/binarySubnetMask"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="@string/binary_subnet_mask"
+                android:textSize="20sp"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/binarySubnetMaskValue"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text=""
+                android:textSize="20sp"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/ipClass"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="@string/ip_class"
+                android:textSize="20sp"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/ipClassValue"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text=""
+                android:textSize="20sp"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/cidrNotation"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="@string/cidr_notation"
+                android:textSize="20sp"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/cidrNotationValue"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="@{viewModel.cidrNotation}"
+                android:textSize="20sp"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/shortNotation"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="@string/short_notation"
+                android:textSize="20sp"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/shortNotationValue"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text=""
+                android:textSize="20sp"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/inAddrArpa"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="@string/in_addr_arpa"
+                android:textSize="20sp"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/inAddrArpaValue"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text=""
+                android:textSize="20sp"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/sixToFour"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="@string/six_to_four"
+                android:textSize="20sp"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/sixToFourValue"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text=""
+                android:textSize="20sp"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
+
+</layout>

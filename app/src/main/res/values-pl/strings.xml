@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="wildcard_mask">Maska wieloznaczna:</string>
+    <string name="app_name">Subnet Mask Master</string>
+    <string name="binary_subnet_mask">Maska podsieci (binarnie):</string>
+    <string name="ip_class">Klasa adresu IP:</string>
+    <string name="cidr_notation">Notacja CIDR:</string>
+    <string name="short_notation">Notacja skrócona:</string>
+    <string name="in_addr_arpa">in-addr.arpa:</string>
+    <string name="six_to_four">Prefiks 6to4:</string>
+    <string name="calculate_button_text">Przelicz</string>
+</resources>
