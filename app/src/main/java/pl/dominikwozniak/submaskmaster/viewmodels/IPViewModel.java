@@ -16,13 +16,23 @@ public class IPViewModel extends BaseObservable {
     }
 
     public void setIpAddress(String ipAddress){
-        IP.setIpAddress(ipAddress);
-        notifyPropertyChanged(BR.ipAddress);
+        String[] splitIpAddress = ipAddress.split("\\.");
+        if(splitIpAddress.length == 4 && !splitIpAddress[0].equals("") && !splitIpAddress[1].equals("") && !splitIpAddress[2].equals("") && !splitIpAddress[3].equals("")) {
+            IP.setIpAddress(ipAddress);
+            notifyPropertyChanged(BR.ipAddress);
+        }else{
+
+        }
     }
 
     public void setSubnetMask(String subnetMask){
-        IP.setSubnetMask(subnetMask);
-        notifyPropertyChanged(BR.subnetMask);
+        String[] splitSubnetMask = subnetMask.split("\\.");
+        if(splitSubnetMask.length == 4 && !splitSubnetMask[0].equals("") && !splitSubnetMask[1].equals("") && !splitSubnetMask[2].equals("") && !splitSubnetMask[3].equals("")) {
+            IP.setSubnetMask(subnetMask);
+            notifyPropertyChanged(BR.subnetMask);
+        }else{
+
+        }
     }
 
     @Bindable
@@ -36,6 +46,11 @@ public class IPViewModel extends BaseObservable {
     }
 
     @Bindable
+    public String getNetworkAddress(){
+        return IP.getNetworkAddress();
+    }
+
+    @Bindable
     public String getCidrNotation(){
         return IP.getCidrNotation();
     }
@@ -45,6 +60,9 @@ public class IPViewModel extends BaseObservable {
             setToastMessage(successMessage);
         else
             setToastMessage(errorMessage);*/
+        IP.calculateToBinary();
+        IP.calculateNetworkAddress();
+        notifyPropertyChanged(BR.networkAddress);
         IP.calculateCidrNotation();
         notifyPropertyChanged(BR.cidrNotation);
     }

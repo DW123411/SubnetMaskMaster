@@ -14,7 +14,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginLeft="5sp"
         android:layout_marginRight="5sp"
@@ -77,7 +77,7 @@
                 android:id="@+id/calculateButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
                 android:gravity="center"
                 android:onClick="@{() -> viewModel.onCalculateClicked()}"
                 android:text="@string/calculate_button_text"
@@ -104,8 +104,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:text=""
+                android:text="@{viewModel.networkAddress}"
                 android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginStart="50sp"
                 android:gravity="center" />
 
         </LinearLayout>
@@ -131,6 +133,8 @@
                 android:layout_gravity="center"
                 android:text=""
                 android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginStart="50sp"
                 android:gravity="center" />
 
         </LinearLayout>
@@ -156,6 +160,8 @@
                 android:layout_gravity="center"
                 android:text=""
                 android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginStart="50sp"
                 android:gravity="center" />
 
         </LinearLayout>
@@ -181,6 +187,8 @@
                 android:layout_gravity="center"
                 android:text=""
                 android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginStart="50sp"
                 android:gravity="center" />
 
         </LinearLayout>
@@ -206,6 +214,8 @@
                 android:layout_gravity="center"
                 android:text=""
                 android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginStart="50sp"
                 android:gravity="center" />
 
         </LinearLayout>
@@ -231,6 +241,8 @@
                 android:layout_gravity="center"
                 android:text=""
                 android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginStart="50sp"
                 android:gravity="center" />
 
         </LinearLayout>
@@ -256,6 +268,8 @@
                 android:layout_gravity="center"
                 android:text="@{viewModel.cidrNotation}"
                 android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginStart="50sp"
                 android:gravity="center" />
 
         </LinearLayout>
@@ -281,6 +295,8 @@
                 android:layout_gravity="center"
                 android:text=""
                 android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginStart="50sp"
                 android:gravity="center" />
 
         </LinearLayout>
@@ -306,6 +322,8 @@
                 android:layout_gravity="center"
                 android:text=""
                 android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginStart="50sp"
                 android:gravity="center" />
 
         </LinearLayout>
@@ -331,6 +349,8 @@
                 android:layout_gravity="center"
                 android:text=""
                 android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginStart="50sp"
                 android:gravity="center" />
 
         </LinearLayout>
