@@ -51,8 +51,48 @@ public class IPViewModel extends BaseObservable {
     }
 
     @Bindable
+    public String getTotalHosts(){
+        return IP.getTotalHosts();
+    }
+
+    @Bindable
+    public String getUsableHosts(){
+        return IP.getUsableHosts();
+    }
+
+    @Bindable
+    public String getWildcardMask(){
+        return IP.getWildcardMask();
+    }
+
+    @Bindable
+    public String getBinarySubnetMask(){
+        return IP.getBinarySubnetMask();
+    }
+
+    @Bindable
+    public String getIpClass(){
+        return IP.getIpClass();
+    }
+
+    @Bindable
     public String getCidrNotation(){
         return IP.getCidrNotation();
+    }
+
+    @Bindable
+    public String getShortNotation(){
+        return IP.getShortNotation();
+    }
+
+    @Bindable
+    public String getInAddrArpa(){
+        return IP.getInAddrArpa();
+    }
+
+    @Bindable
+    public String getSixToFour(){
+        return IP.getSixToFour();
     }
 
     public void onCalculateClicked() {
@@ -61,10 +101,23 @@ public class IPViewModel extends BaseObservable {
         else
             setToastMessage(errorMessage);*/
         IP.calculateToBinary();
+        notifyPropertyChanged(BR.binarySubnetMask);
         IP.calculateNetworkAddress();
         notifyPropertyChanged(BR.networkAddress);
+        IP.calculateTotalHosts();
+        notifyPropertyChanged(BR.totalHosts);
+        IP.calculateUsableHosts();
+        notifyPropertyChanged(BR.usableHosts);
+        IP.calculateWildcardMask();
+        notifyPropertyChanged(BR.wildcardMask);
         IP.calculateCidrNotation();
         notifyPropertyChanged(BR.cidrNotation);
+        notifyPropertyChanged(BR.shortNotation);
+        IP.calculateIpClass();
+        notifyPropertyChanged(BR.ipClass);
+        notifyPropertyChanged(BR.inAddrArpa);
+        IP.calculateSixToFour();
+        notifyPropertyChanged(BR.sixToFour);
     }
 
     public boolean isInputDataValid() {

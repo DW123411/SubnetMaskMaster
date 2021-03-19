@@ -107,7 +107,7 @@
                 android:text="@{viewModel.networkAddress}"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:layout_marginStart="50sp"
+                android:layout_marginStart="20sp"
                 android:gravity="center" />
 
         </LinearLayout>
@@ -131,10 +131,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:text=""
+                android:text="@{viewModel.totalHosts}"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:layout_marginStart="50sp"
+                android:layout_marginStart="20sp"
                 android:gravity="center" />
 
         </LinearLayout>
@@ -158,10 +158,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:text=""
+                android:text="@{viewModel.usableHosts}"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:layout_marginStart="50sp"
+                android:layout_marginStart="20sp"
                 android:gravity="center" />
 
         </LinearLayout>
@@ -185,10 +185,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:text=""
+                android:text="@{viewModel.wildcardMask}"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:layout_marginStart="50sp"
+                android:layout_marginStart="20sp"
                 android:gravity="center" />
 
         </LinearLayout>
@@ -212,10 +212,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:text=""
-                android:textSize="20sp"
+                android:text="@{viewModel.binarySubnetMask}"
+                android:textSize="15sp"
                 android:textStyle="bold"
-                android:layout_marginStart="50sp"
+                android:layout_marginStart="20sp"
                 android:gravity="center" />
 
         </LinearLayout>
@@ -239,10 +239,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:text=""
+                android:text="@{viewModel.ipClass}"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:layout_marginStart="50sp"
+                android:layout_marginStart="20sp"
                 android:gravity="center" />
 
         </LinearLayout>
@@ -269,7 +269,7 @@
                 android:text="@{viewModel.cidrNotation}"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:layout_marginStart="50sp"
+                android:layout_marginStart="20sp"
                 android:gravity="center" />
 
         </LinearLayout>
@@ -293,10 +293,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:text=""
+                android:text="@{viewModel.shortNotation}"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:layout_marginStart="50sp"
+                android:layout_marginStart="20sp"
                 android:gravity="center" />
 
         </LinearLayout>
@@ -320,10 +320,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:text=""
+                android:text="@{viewModel.inAddrArpa}"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:layout_marginStart="50sp"
+                android:layout_marginStart="20sp"
                 android:gravity="center" />
 
         </LinearLayout>
@@ -347,10 +347,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:text=""
+                android:text="@{viewModel.sixToFour}"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:layout_marginStart="50sp"
+                android:layout_marginStart="20sp"
                 android:gravity="center" />
 
         </LinearLayout>
