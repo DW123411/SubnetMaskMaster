@@ -122,7 +122,11 @@ public class IPModel {
     }
 
     public void calculateUsableHosts(){
-        usableHosts = totalHosts - 2;
+        if(totalHosts < 2){
+            usableHosts = 0;
+        }else{
+            usableHosts = totalHosts - 2;
+        }
     }
 
     public void calculateWildcardMask(){
@@ -215,6 +219,9 @@ public class IPModel {
 
             firstNum = firstNum / 10;
             secondNum = secondNum / 10;
+        }
+        if(output.toString() == ""){
+            output.append(0);
         }
         return Integer.valueOf(output.reverse().toString());
     }
