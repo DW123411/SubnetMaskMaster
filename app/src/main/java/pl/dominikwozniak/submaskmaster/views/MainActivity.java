@@ -10,6 +10,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+
 import pl.dominikwozniak.submaskmaster.R;
 import pl.dominikwozniak.submaskmaster.databinding.ActivityMainBinding;
 import pl.dominikwozniak.submaskmaster.viewmodels.IPViewModel;
@@ -27,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     private static View shortNotationValue;
     private static View inAddrArpaValue;
     private static View sixToFour;
+    private AdView adView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +65,16 @@ public class MainActivity extends AppCompatActivity {
         sixToFour.setVisibility(View.GONE);
 
         shortAnimationDuration = getResources().getInteger(android.R.integer.config_shortAnimTime);
+
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+
+        adView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
     }
 
     @BindingAdapter({"toastMessage"})
